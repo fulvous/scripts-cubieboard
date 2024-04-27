@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  <meta charset="UTF-8">
+    <title>Botón para invocar un script Bash</title>
+    <script>
+      function ejecutarScript() {
+        // Realiza una solicitud HTTP POST a un script PHP que ejecutará el script Bash
+        console.log("Invocando PHP de fondo");
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "ejecutar_script.php", true);
+        xhr.send();
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Botón para invocar un script Bash</h1>
+    <form action="ejecutar_script.php" method="post">
+      <input type="submit" value="Ejecutar script redirigiendo"/>
+    </form>
+    <form action="ejecutar_script_sudo.php" method="post">
+      <input type="submit" value="Ejecutar script redirigiendo y sudo"/> 
+    </form>
+    <button onclick="ejecutarScript()">Ejecutar Script SIN redirigir</button>
+  </body>
+</html>

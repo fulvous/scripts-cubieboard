@@ -1,0 +1,7 @@
+Recuerda editar la tabla sudoers con el siguiente comando:
+
+sudo visudo
+
+Agregar al final la siguiente línea:
+
+www-data ALL=(ALL) NOPASSWD: /bin/bash /var/www/html/scripts/script1.sh
